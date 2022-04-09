@@ -10,6 +10,7 @@ def short_url(o_url):
     soup = bs(html_str.text, 'html.parser')
     pre_str = soup.findAll('code', limit=1)
     # o_url = 'http://www.google.com'
+    
     token_str = pre_str[0].text
 
     url1 = f'https://api.pics.ee/v1/links/?access_token={token_str}'
